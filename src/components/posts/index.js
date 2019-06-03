@@ -24,7 +24,7 @@ class Post extends Component {
     );
     return newString;
   }
-  
+
   render() {
     const { post } = this.props;
     return (
@@ -47,15 +47,15 @@ class posts extends Component {
   };
 
   //fetch request
-  componentDidMount() {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-      .then(response => response.json())
-      .catch(e => {
-        console.log(e);
-      })
-      .then(data => {
-        this.setState({ data, isLoading: false });
-      });
+  async componentDidMount() {
+    try {
+      const response = await fetch("https://jsonplaceholder.typicode.com/posts")
+      const json = await response.json();
+      this.setState({data: json, isLoading: false});
+    }
+    catch(e){
+      console.log(e);
+    }
   }
 
   //Logout, removes 'username' token from local storage
