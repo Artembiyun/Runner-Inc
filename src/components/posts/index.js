@@ -5,6 +5,8 @@ import logo from "../../images/HeaderNavLogoRunner.png";
 class Post extends Component {
   //converts every first letter to upper case
   toUpper(str) {
+    //toLowerCase string, split by " "
+    //then toUpperCase each first letter and join
     let split = str.toLowerCase().split(" ");
     for (let i = 0; i < split.length; i++) {
       split[i] = split[i].charAt(0).toUpperCase() + split[i].substring(1);
@@ -22,6 +24,7 @@ class Post extends Component {
     );
     return newString;
   }
+  
   render() {
     const { post } = this.props;
     return (
@@ -43,6 +46,7 @@ class posts extends Component {
     isLoading: true
   };
 
+  //fetch request
   componentDidMount() {
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then(response => response.json())
