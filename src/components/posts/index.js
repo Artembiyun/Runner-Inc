@@ -46,7 +46,7 @@ class posts extends Component {
     isLoading: true
   };
 
-  //fetch request
+  //fetch request using async/await syntax
   async componentDidMount() {
     try {
       const response = await fetch("https://jsonplaceholder.typicode.com/posts")
