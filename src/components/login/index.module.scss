@@ -39,13 +39,11 @@
   }
 
   #emailfield{
-    border-radius: 4px 4px 0 0;
     border: solid 1px rgb(226, 226, 226);
     border-bottom: none;
   }
 
   #passwordfield{
-    border-radius: 0 0 4px 4px;
     border: solid 1px rgb(226, 226, 226);
   }
 
@@ -55,7 +53,7 @@
     align-items: center;
     background-color: white;
     border: solid 1px rgb(235, 235, 235);
-    border-radius: 0 5px;
+    border-radius: 4px 4px 0 0;
   }
 
   #passwordbox{
@@ -64,7 +62,7 @@
     align-items: center;
     background-color: white;
     border: solid 1px rgb(235, 235, 235);
-    border-radius: 5px 0;
+    border-radius: 0 0 4px 4px;
   }
 
   #passwordfield{
